@@ -1,0 +1,103 @@
+/* Background */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #dfe7f1, #1a3d7c);
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.main-header h1 {
+    font-size: 36px;
+    color: #0a1f44;
+    font-weight: 700;
+}
+
+/* Hero Section */
+.hero-section {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 95%;
+    margin: 20px auto;
+    line-height: 1.8;
+}
+
+.hero-section h2 {
+    margin-bottom: 15px;
+    color: #0a1f44;
+    font-size: 26px;
+}
+
+/* Info Grid */
+.info-grid {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    color: #0a1f44;
+    font-size: 20px;
+}
+
+.info-card ul {
+    padding-left: 20px;
+    color: #333;
+}
+
+.info-card li {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+.btn-container {
+    text-align: center;
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #0a1f44;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #123366;
+}
+
+.btn-secondary {
+    background: white;
+    color: #0a1f44;
+    border: 2px solid #0a1f44;
+}
+
+.btn-secondary:hover {
+    background: #0a1f44;
+    color: white;
+}

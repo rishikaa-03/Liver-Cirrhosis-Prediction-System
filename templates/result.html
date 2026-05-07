@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+    /* General Body and Layout */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a4d95; /* Deep blue background, consistent with other pages */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* --- Container (The White Card) --- */
+.container {
+    background-color: white;
+    padding: 40px 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow to stand out */
+    width: 100%;
+    max-width: 500px; /* Size appropriate for a result card */
+    text-align: left;
+}
+
+/* --- Header --- */
+.container h2 {
+    font-size: 28px;
+    color: #1a4d95; /* Blue header color */
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    text-align: center;
+}
+
+/* --- Result Paragraphs --- */
+.container p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Emphasize key data points */
+.container p strong {
+    font-weight: bold;
+    color: #000;
+    display: inline-block;
+    min-width: 150px; /* Aligns the data if labels vary slightly */
+}
+
+/* Specific styling for the prediction stage */
+.container p:nth-of-type(2) strong:after {
+    content: " "; /* Prevent line break right after strong tag */
+}
+
+.container p:nth-of-type(2) {
+    font-size: 18px;
+    color: #b50000; /* Use a prominent color like red/maroon for stage */
+    font-weight: bold;
+}
+
+/* Specific styling for the recommendation */
+.container p:nth-of-type(3) {
+    border-top: 1px dashed #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* --- Back Link --- */
+.container a {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #1a4d95;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 30px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.container a:hover {
+    background-color: #143a75;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Prediction Result</h2>
+    <p><strong>Patient:</strong> {{ patient['patient_name'] }}</p>
+    <p><strong>Predicted Stage:</strong> {{ stage }}</p>
+    <p><strong>Recommendation:</strong> {{ recommendation }}</p>
+    <a href="/dashboard">Back to Dashboard</a>
+</div>
+</body>
+</html>

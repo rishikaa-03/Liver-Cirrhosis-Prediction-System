@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Prediction</title>
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e6eef8, #1d3f7a);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    width: 100%;
+    max-width: 600px;
+}
+
+h2 {
+    text-align: center;
+    color: #0a1f44;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Row layout for personal info */
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.row input, .row select {
+    flex: 1;
+}
+
+/* Laboratory tests */
+.lab-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.lab-input:focus {
+    border-color: #1d3f7a;
+    outline: none;
+    box-shadow: 0 0 8px rgba(29,63,122,0.3);
+}
+
+button {
+    width: 100%;
+    background: #0a1f44;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #123366;
+    transform: scale(1.03);
+}
+
+input::placeholder, select option {
+    color: #888;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Patient Data</h2>
+    <form action="/predict" method="POST">
+        
+        <!-- Personal Information Row -->
+        <div class="row">
+            <input type="text" name="patient_name" placeholder="Patient Name" required>
+            <input type="number" name="age" placeholder="Age" required>
+            <select name="gender">
+                <option>Male</option>
+                <option>Female</option>
+            </select>
+        </div>
+        
+        <!-- Laboratory Tests -->
+        <input class="lab-input" type="number" step="0.01" name="bilirubin" placeholder="Bilirubin" required>
+        <input class="lab-input" type="number" step="0.01" name="albumin" placeholder="Albumin" required>
+        <input class="lab-input" type="number" step="0.01" name="copper" placeholder="Copper" required>
+        <input class="lab-input" type="number" step="0.01" name="alk_phos" placeholder="Alk Phos" required>
+        <input class="lab-input" type="number" step="0.01" name="sgot" placeholder="SGOT" required>
+        <input class="lab-input" type="number" name="platelets" placeholder="Platelets" required>
+        <input class="lab-input" type="number" step="0.01" name="prothrombin" placeholder="Prothrombin" required>
+
+       
+        <div class="row">
+            <select name="ascites">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <select name="hepatomegaly">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <select name="spiders">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+            <select name="edema">
+                <option>Yes</option>
+                <option>No</option>
+            </select>
+        </div>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+
+</body>
+</html>

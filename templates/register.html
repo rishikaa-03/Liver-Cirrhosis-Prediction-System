@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6eef8, #1d3f7a);
+            height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 25px 0;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #0a1f44;
+        }
+
+        .header p {
+            margin-top: -10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .form-container {
+            width: 400px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            padding: 35px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.15);
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #0a1f44;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #1d3f7a; /* Label color */
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        input:focus {
+            border-color: #1d3f7a;
+            outline: none;
+        }
+
+        .btn {
+            width: 100%;
+            background: #0a1f44;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+
+        .btn:hover {
+            background: #123366;
+        }
+
+        .small-text {
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .small-text a {
+            color: #0a1f44;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .small-text a:hover {
+            text-decoration: underline;
+        }
+
+        .home-link {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+            text-decoration: none;
+            color: #0a1f44;
+        }
+
+        .home-link:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Liver Cirrhosis Prediction System</h1>
+        <p style="color: #0a1f44;">Doctor Portal</p>
+    </div>
+
+    <div class="form-container">
+        <h2>Doctor Registration</h2>
+
+        <form method="POST" action="/register">
+            <label>Full Name</label>
+            <input type="text" name="username" placeholder="Dr. John Doe" required>
+
+            <label>Phone Number</label>
+            <input type="text" name="phone" placeholder="+91 9876543210" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Create a strong password" required>
+
+            <button class="btn">Register</button>
+        </form>
+
+        <p class="small-text">Already have an account?  
+            <a href="/login">Login here</a>
+        </p>
+
+        <a href="/" class="home-link">Back to Home</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #e6eef8, #1d3f7a);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            color: #0a1f44;
+        }
+
+        .header h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .dashboard-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .dashboard-container h3 {
+            margin-bottom: 30px;
+            color: #0a1f44;
+            font-size: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #0a1f44;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #123366;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background: #1d3f7a;
+        }
+
+        .btn-secondary:hover {
+            background: #0a1f44;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h2>Liver Cirrhosis Prediction System</h2>
+        <p style="color:#0a1f44;font-size: medium;;">Welcome to Doctor Dashboard</p>
+    </div>
+
+    <div class="dashboard-container">
+        <h3>Dashboard</h3>
+        <a href="/prediction" class="btn">Register New Patient</a>
+        
+        
+    </div>
+
+</body>
+</html>

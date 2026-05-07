@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Cirrhosis Prediction System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>Liver Cirrhosis Prediction System</h1>
+    </header>
+
+    <section class="hero-section">
+        <h2>Understanding Liver Cirrhosis</h2>
+        <p>
+            Liver cirrhosis is a late stage of scarring (fibrosis) of the liver caused by many forms of liver 
+            diseases and conditions. The liver carries out several necessary functions, including detoxifying 
+            harmful substances in your body, cleaning your blood and making vital nutrients.
+        </p>
+        <p>
+            Early detection and intervention are crucial for managing this condition effectively. Our prediction 
+            system uses advanced algorithms to assess risk factors and provide valuable insights for healthcare 
+            professionals.
+        </p>
+    </section>
+
+    <section class="info-grid">
+
+        <div class="info-card">
+            <h3>Common Causes</h3>
+            <ul>
+                <li>Chronic alcohol abuse</li>
+                <li>Hepatitis B and C infections</li>
+                <li>Fatty liver disease</li>
+                <li>Genetic digestive disorders</li>
+                <li>Autoimmune hepatitis</li>
+                <li>Bile duct diseases</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Warning Signs</h3>
+            <ul>
+                <li>Fatigue and weakness</li>
+                <li>Easy bleeding or bruising</li>
+                <li>Loss of appetite</li>
+                <li>Nausea and weight loss</li>
+                <li>Swelling in legs and abdomen</li>
+                <li>Jaundice (yellowing of skin)</li>
+            </ul>
+        </div>
+
+        <div class="info-card">
+            <h3>Treatment Options</h3>
+            <ul>
+                <li>Lifestyle modifications</li>
+                <li>Medication for complications</li>
+                <li>Treatment of underlying causes</li>
+                <li>Management of portal hypertension</li>
+                <li>Liver transplantation (severe cases)</li>
+                <li>Regular monitoring and follow-up</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <div class="btn-container">
+        <a href="{{ url_for('register') }}" class="btn-primary">Sign Up as Doctor</a>
+        <a href="{{ url_for('login') }}" class="btn-secondary">Login</a>
+    </div>
+
+</body>
+</html>
