@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 
 
-df = pd.read_csv('C:\\Users\\rishi\\Downloads\\Telegram Desktop\\liver_cirrhosis_app\\liver_data.csv', delimiter='\t')
+df = pd.read_csv('PATH', delimiter='\t')
 df.columns = df.columns.str.strip()
 
 df['ascites'] = df['ascites'].map({'Yes':1, 'No':0})
